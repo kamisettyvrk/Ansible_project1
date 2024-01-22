@@ -25,7 +25,7 @@
       register: services_state
     - name: Debug
       debug:
-        var: services_state
+        msg: "{{ services_state.stdout}}"
 
 
     
