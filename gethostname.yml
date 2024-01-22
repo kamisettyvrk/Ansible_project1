@@ -25,7 +25,7 @@
       register: services_state
     - name: Debug
       debug:
-        msg: "{{ services_state.['firewalld.service'] }}"
+        msg: "{{ services_state.firewalld.service }}"
 
 
     
