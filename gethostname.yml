@@ -7,3 +7,10 @@
     - name: Print Value
       debug:
         var:  result
+    - name: Get OS release
+      shell: |
+          cat /etc/os-release
+      register: OSVersionInfo
+    - name: Get OSVersionInfo
+      debug: 
+        msg: "{{ OSVersionInfo.stdout }}"
