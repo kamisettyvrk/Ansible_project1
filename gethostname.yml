@@ -25,7 +25,5 @@
       register: services_state
     - name: Debug
       debug:
-        msg: "{{ services_state.firewalld.service }}"
-
-
+      var: ansible_facts.services['iptables.service']
     
