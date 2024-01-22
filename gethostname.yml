@@ -24,6 +24,6 @@
       service_facts:
       register: services_state
     - name: Debug
-      debug:
-      var: ansible_facts.services['iptables.service']
+      ansible.builtin.debug:
+        var: ansible_facts.services['iptables.service']
     
