@@ -14,3 +14,11 @@
     - name: Get OSVersionInfo
       debug: 
         msg: "{{ OSVersionInfo.stdout }}"
+    - name: Get Firewall status
+      shell:  systemctl status firewalld
+      register: firewallresult
+    - name: Get Firewall status result
+      debug:
+        msg: "{{ firewallresult.stdout }}"
+
+    
