@@ -25,5 +25,5 @@
       register: services_state
     - name: Debug
       ansible.builtin.debug:
-        var: ansible_facts.services['iptables.service']
+        var: ansible_facts.services['firewalld.service']
     
